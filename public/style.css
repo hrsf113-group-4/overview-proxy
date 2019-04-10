@@ -1,0 +1,15 @@
+#app{
+  display: block;
+}
+
+#menu {
+  display: inline-block;
+}
+
+#reviews {
+  display: inline-block;
+}
+
+#reservations {
+  display: inline-block;
+}
