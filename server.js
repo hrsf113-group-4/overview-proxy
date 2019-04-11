@@ -13,12 +13,14 @@ const overview = axios.create({
 });
 
 const menu = axios.create({
-  baseURL: 'http://localhost:3002',
+  baseURL: 'http://localhost:3003',
 });
 
 const reviews = axios.create({
-  baseURL: 'http://localhost:3003',
+  baseURL: 'http://localhost:3004',
 });
+
+
 
 
 app.use('/api/restaurant/:rid', (req, res) => {
@@ -27,14 +29,16 @@ app.use('/api/restaurant/:rid', (req, res) => {
     .catch(err => res.send(err));
 })
 
-app.use('/restaurant/:id/reviews', (req, res) => {
-  reviews.get(`/restaurant/:id/reviews`)
+app.use('/api/restaurants/:id/reviews', (req, res) => {
+  console.log('review request');
+  reviews.get(`/api/restaurants/${req.params.id}/reviews`)
     .then(response => res.send(response.data))
     .catch(err => res.send(err));
 })
 
-app.use('/', (req, res) => {
-  reviews.get(`/restaurant/:id/filters`)
+app.use('/api/restaurants/:id/filters', (req, res) => {
+  console.log('filter request');
+  reviews.get(`/api/restaurants/${req.params.id}/filters`)
     .then(response => res.send(response.data))
     .catch(err => res.send(err));
 })

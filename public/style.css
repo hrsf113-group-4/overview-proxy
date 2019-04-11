@@ -1,15 +1,75 @@
-#app{
-  display: block;
+/* body {
+  display: flex;
+  justify-content: center;
+} */
+
+body, html{
+  margin:0;
+  padding:0;
+  width: 100%;
 }
+
+/* #headers{
+  display: inline-flex;
+  flex-direction: row;
+}
+
+#main {
+  border: 1px solid black;
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+} */
+
+#main {
+  display: grid;
+  /* grid-template-columns:; */
+}
+
+#headers {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+#left { 
+  grid-column: 1;
+  grid-row: 2;
+  margin-left: 20%;
+}
+#right {
+  grid-column: 2;
+  grid-row: 2;
+  margin-right: 40%;
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+}
+
+#sticky {
+  
+}
+/* 
+#main {
+  display: grid;
+} */
+
+/* 
+#search {
+  display: inline-block;
+}
+
+#app {
+  display: inline-block;
+}
+*/
 
 #menu {
   display: inline-block;
+  margin-left: 50px;
 }
 
 #reviews {
   display: inline-block;
+  margin-left: 20px;
 }
 
-#reservations {
-  display: inline-block;
-}
