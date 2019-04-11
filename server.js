@@ -12,6 +12,10 @@ const overview = axios.create({
   baseURL: 'http://localhost:3001',
 });
 
+const reservations = axios.create({
+  baseURL: 'http://localhost:3002',
+});
+
 const menu = axios.create({
   baseURL: 'http://localhost:3003',
 });
@@ -19,6 +23,8 @@ const menu = axios.create({
 const reviews = axios.create({
   baseURL: 'http://localhost:3004',
 });
+
+
 
 
 
